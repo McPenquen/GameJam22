@@ -17,7 +17,7 @@ public class p2Movement : MonoBehaviour
     void Update()
     {
         //Remember to change  the inputs in unity
-        float horizontalInput = Input.GetAxis("Horizontal");
-        float verticalInput = Input.GetAxis("Vertical");
+        float horizontalInput = Input.GetAxis("Horizontal2");
+        float verticalInput = Input.GetAxis("Vertical2");
     }
 }

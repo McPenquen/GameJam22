@@ -7,6 +7,7 @@ TagManager:
   - Borders
   - Player1
   - Enemy
+  - Ground
   layers:
   - Default
   - TransparentFX

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 9067975969116682065}
   - component: {fileID: 9067975969116682064}
   - component: {fileID: 9067975969116682062}
+  - component: {fileID: 268330049722624303}
   m_Layer: 0
   m_Name: Player1
   m_TagString: Untagged
@@ -148,6 +149,20 @@ MonoBehaviour:
   playerMoveSpeed: 0.57
   jumpForce: 7.93
   fastFallMod: 0.5
+--- !u!114 &268330049722624303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9067975969116682069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 081e0cce13a391a4a87cf4d05035331a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 3
+  maxIFrames: 1
 --- !u!1 &9067975969193739919
 GameObject:
   m_ObjectHideFlags: 0
@@ -160,7 +175,8 @@ GameObject:
   - component: {fileID: 9067975969193739914}
   - component: {fileID: 9067975969193739917}
   - component: {fileID: 9067975969193739915}
-  m_Layer: 0
+  - component: {fileID: 851980598}
+  m_Layer: 6
   m_Name: p1JumpBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -270,3 +286,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70c78ad685789ce4aa344f7b46e67c59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitCount: 0
+--- !u!50 &851980598
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9067975969193739919}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

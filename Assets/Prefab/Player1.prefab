@@ -145,7 +145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1845f3998db19714c83834c3a0e9e822, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerMoveSpeed: 0.57
+  playerMoveSpeed: 3
   jumpForce: 7.93
   fastFallMod: 0.5
 --- !u!1 &9067975969193739919
@@ -270,3 +270,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70c78ad685789ce4aa344f7b46e67c59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitCount: 0

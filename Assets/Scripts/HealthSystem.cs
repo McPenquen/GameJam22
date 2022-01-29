@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-class HealthSystem : MonoBehaviour
+public class HealthSystem : MonoBehaviour
 {
 	public int health = 3;
 	public float maxIFrames = 1.0f;
@@ -31,6 +31,6 @@ class HealthSystem : MonoBehaviour
 	}
 	
 	void PlayerDie() {
-		//@TODO Add player death code
+		print("dead");
 	}
 }

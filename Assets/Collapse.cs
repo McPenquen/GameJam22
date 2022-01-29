@@ -31,7 +31,7 @@ public class Collapse : MonoBehaviour
         {
             EnableObject();
         }
-        print(currentTime);
+        //print(currentTime);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

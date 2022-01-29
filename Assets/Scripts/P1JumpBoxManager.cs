@@ -4,19 +4,19 @@ using UnityEngine;
 
 class P1JumpBoxManager : MonoBehaviour
 {
-	[HideInInspector] public bool CanJump { get { return true /*hitCount > 0*/; } }
+	[HideInInspector] public bool CanJump { get { return hitCount > 0; } }
 	public int hitCount = 0;
 
-	void OnCollisionEnter2D(Collision2D collider)
+	void OnTriggerEnter2D(Collider2D collider)
 	{
 		Debug.Log("Yeah I do exist");
-		if (collider.otherCollider.gameObject.tag == "Ground")
+		if (collider.tag == "Ground")
 			hitCount++;
 	}
 	
-	void OnCollisionLeave2D(Collision2D collider)
+	void OnTriggerExit2D(Collider2D collider)
 	{
-		if (collider.otherCollider.gameObject.tag == "Ground") {
+		if (collider.tag == "Ground") {
 			hitCount--;
 			if (hitCount < 0)
 			{

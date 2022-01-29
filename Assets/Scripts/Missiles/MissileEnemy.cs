@@ -5,19 +5,23 @@ using UnityEngine;
 public class MissileEnemy : MonoBehaviour
 {
     [SerializeField] private GameObject Player1 = null;
+    [SerializeField] private Player2Script Player2 = null;
+
     [Header("Movement Variables")]
-    [SerializeField] private float speed = 5;
+    [SerializeField] private float speed = 1;
 
     // Private Variables
     private bool isAlive = true;
     // Dying counter
-    private float dyingCountdown = 3.0f;
+    private float dyingCountdown = 3.0f; // countdown for the missile to die
     private SpriteRenderer sRenderer = null;
+    private bool isKillable = false; // can be killed by player 2
     private void Start()
     {
         // Setup the missile
         isAlive = true;
         sRenderer = GetComponent<SpriteRenderer>();
+        isKillable = false;
     }
 
     private void Update()
@@ -34,6 +38,17 @@ public class MissileEnemy : MonoBehaviour
             Quaternion q = Quaternion.AngleAxis(newAngle, Vector3.forward);
             transform.rotation = Quaternion.Slerp(transform.rotation, q, Time.deltaTime * speed);
             // inspired from: https://answers.unity.com/questions/650460/rotating-a-2d-sprite-to-face-a-target-on-a-single.html
+
+            // Check the distance to the player 2 - it is killable if the distance is smaller than the attack
+            float dist = (Player2.transform.position - transform.position).magnitude;
+            if (dist <= Player2.GetAttackRadius())
+            {
+                isKillable = true;
+            }
+            else
+            {
+                isKillable = false;
+            }
         }
         else
         {
@@ -68,5 +83,18 @@ public class MissileEnemy : MonoBehaviour
     public void SetAlive(bool b )
     {
         isAlive = b;
+    }
+    // Set if it it killable by player 2
+    public void SetKillable(bool b)
+    {
+        isKillable = b;
+    }
+    // Die by player 2 if it is killable now
+    public void GetKilled()
+    {
+        if (isKillable)
+        {
+            isAlive = false;
+        }
     }
 }

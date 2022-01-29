@@ -10,7 +10,7 @@ public class Patrol : MonoBehaviour
 
     private int waypointIndex = 0;
 
-    private float waitTime = 1f; // in seconds
+    public float waitTime = 1f; // in seconds
     private float waitCounter = 0f;
     private bool waiting = false;
 

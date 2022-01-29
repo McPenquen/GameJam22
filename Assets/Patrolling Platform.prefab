@@ -251,3 +251,5 @@ MonoBehaviour:
   - {fileID: 2754740949362429623}
   - {fileID: 2754740948901769468}
   speed: 3
+  waitToggle: 0
+  waitTime: 5

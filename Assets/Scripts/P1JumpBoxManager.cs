@@ -4,7 +4,7 @@ using UnityEngine;
 
 class P1JumpBoxManager : MonoBehaviour
 {
-	[HideInInspector] public bool CanJump { get { return hitCount == 0; } };
+	[HideInInspector] public bool CanJump { get { return hitCount == 0; } }
 	int hitCount = 0;
 
 	void OnCollisionEnter()

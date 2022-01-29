@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class StartGame : MonoBehaviour
 {
@@ -15,7 +17,7 @@ public class StartGame : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Return))
         {
-            Print();
+            ChangeScene();
         }
     }
 
@@ -26,6 +28,6 @@ public class StartGame : MonoBehaviour
 
     private void ChangeScene()
     {
-
+        SceneManager.LoadScene(sceneBuildIndex:1);
     }
 }

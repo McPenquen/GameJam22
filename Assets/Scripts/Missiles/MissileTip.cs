@@ -8,5 +8,6 @@ public class MissileTip : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D other)
     {
         owner.SetAlive(false);
+		GameObject.Find("Player1").GetComponent<HealthSystem>().Damage();
     }
 }

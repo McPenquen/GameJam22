@@ -33,9 +33,11 @@ class P1Movement : MonoBehaviour
 	{
 		if (Input.GetKey(KeyCode.A))
 			rb.velocity = new Vector2(-playerMoveSpeed, rb.velocity.y);
-		if (Input.GetKey(KeyCode.D))
+		else if (Input.GetKey(KeyCode.D))
 			rb.velocity = new Vector2(playerMoveSpeed, rb.velocity.y);
-
+		else 
+			rb.velocity = new Vector2(0.0f, rb.velocity.y);
+		
 		if (Input.GetKeyDown(KeyCode.R) || Input.GetKeyDown(KeyCode.W))
 		{
 			if (jbm.CanJump)
@@ -45,8 +47,6 @@ class P1Movement : MonoBehaviour
 		}
 
 		if (rb.velocity.y < 0.0f)
-		{
-			rb.velocity += new Vector2(0.0f, Physics2D.gravity.y * fastFallMod);
-		}
+			rb.velocity += new Vector2(0.0f, Physics2D.gravity.y * fastFallMod * Time.deltaTime);
 	}
 }

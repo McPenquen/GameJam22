@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class UiInGame : MonoBehaviour
 {
@@ -62,6 +63,10 @@ public class UiInGame : MonoBehaviour
             emptyHealth1.SetActive(true);
             emptyHealth2.SetActive(true);
             emptyHealth3.SetActive(true);
+        }
+
+        if(Input.GetKeyDown(KeyCode.Escape)){
+            SceneManager.LoadScene(0);
         }
     }
 }

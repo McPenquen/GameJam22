@@ -8,7 +8,10 @@ class CameraMovement : MonoBehaviour
     Transform p2Transform;
     [Range(0.0f, 1.0f)]
     public float p2Strength;
-
+	public float initialDelay = 5.0f;
+	public float camSlideSpeed = 0.1f;
+	
+	
     void Awake()
     {
 
@@ -23,6 +26,11 @@ class CameraMovement : MonoBehaviour
 
     void Update()
     {
-        Camera.main.transform.position = new Vector3(0.0f, Mathf.Lerp(p1Transform.position.y, p2Transform.position.y, p2Strength), Camera.main.transform.position.z);
+		if (initialDelay > 0.0f) {
+			initialDelay -= Time.deltaTime;
+			return;
+		}
+		
+        Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position, new Vector3(0.0f, Mathf.Lerp(p1Transform.position.y, p2Transform.position.y, p2Strength), Camera.main.transform.position.z), camSlideSpeed);
     }
 }

@@ -8,6 +8,6 @@ class FireBarMovement : MonoBehaviour
 
 	void Update()
 	{
-		transform.position += new Vector3(0.0f, speed, 0.0f);
+		transform.position += new Vector3(0.0f, speed * Time.deltaTime, 0.0f);
 	}
 }

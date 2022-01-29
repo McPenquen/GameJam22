@@ -10,8 +10,8 @@ public class p2Movement : MonoBehaviour
     // Start is called before the first frame update
 
     public float movementSpeed = 5.0f; 
-    public float halfScreenHeight = 4.5f;
-    public float halfScreenWidth = 10.0f; 
+    //public float halfScreenHeight = 4.5f;
+    //public float halfScreenWidth = 10.0f; 
     private Vector2 screenBounds = new Vector2();
     public GameObject player;
     private SpriteRenderer playerSprite;

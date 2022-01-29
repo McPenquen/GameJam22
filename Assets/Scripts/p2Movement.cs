@@ -10,8 +10,8 @@ public class p2Movement : MonoBehaviour
     // Start is called before the first frame update
 
     public float movementSpeed = 5.0f; 
-    float halfScreenHeight = 4.5f;
-    float halfScreenWidth = 10.0f; 
+    public float halfScreenHeight = 4.5f;
+    public float halfScreenWidth = 10.0f; 
     //private Vector2 screenBounds = new Vector2();
 
     void Start()
@@ -41,28 +41,28 @@ public class p2Movement : MonoBehaviour
         {
             //transform.position.x -= 0.5f;
             inputVel.x = 0.0f; 
-            inputVel.x -= 0.5f;            
+            inputVel.x -= 1.0f;            
         }
 
         if(transform.position.x <= -halfScreenWidth)
         {
             //transform.position.x += 0.5f;
             inputVel.x = 0.0f;
-            inputVel.x += 0.5f;            
+            inputVel.x += 1.0f;            
         }
 
         if(transform.position.y >= halfScreenHeight)
         {
             //transform.position.y -= 0.5f;
             inputVel.y = 0.0f;
-            inputVel.y -= 0.5f;            
+            inputVel.y -= 1.0f;            
         }
 
         if(transform.position.y <= -halfScreenHeight)
         {
             //transform.position.y += 0.5f;
             inputVel.y = 0.0f;
-            inputVel.y += 0.5f;            
+            inputVel.y += 1.0f;            
         }
 
         transform.Translate(inputVel); 
@@ -75,5 +75,6 @@ public class p2Movement : MonoBehaviour
 
         transform.position = viewPos; 
         */
+        
     }
 }

@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 2754740949730619502}
   - component: {fileID: 2754740949730619489}
   - component: {fileID: 2754740949730619488}
+  - component: {fileID: 3352680197184496546}
   m_Layer: 0
   m_Name: Platform
   m_TagString: Ground
@@ -152,7 +153,7 @@ Transform:
   m_GameObject: {fileID: 2754740949730619491}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 0.5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2754740948216875342}
   m_RootOrder: 0
@@ -197,7 +198,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9d76ed18ac6ba9c418460325a35573f6, type: 3}
   m_Color: {r: 0.50614095, g: 0.8867924, b: 0.5131255, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -253,3 +254,15 @@ MonoBehaviour:
   speed: 3
   waitToggle: 0
   waitTime: 5
+--- !u!114 &3352680197184496546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2754740949730619491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89d8a684841c6ec4f97bb417f9f0d8c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

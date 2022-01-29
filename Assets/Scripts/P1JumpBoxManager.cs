@@ -9,7 +9,7 @@ class P1JumpBoxManager : MonoBehaviour
 
 	void OnTriggerEnter2D(Collider2D collider)
 	{
-		Debug.Log("Yeah I do exist");
+		//Debug.Log("Yeah I do exist");
 		if (collider.tag == "Ground")
 			hitCount++;
 	}

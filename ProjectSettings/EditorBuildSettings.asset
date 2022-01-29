@@ -9,9 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/UI.unity
     guid: 497c77b434f092248a67a2e8002c1c08
   - enabled: 1
-    path: Assets/Scenes/EnemiesScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
-    path: Assets/Scenes/TempDebugScene.unity
-    guid: 1b01c49bfe801f0409ea7600f32b61b3
+    path: Assets/Scenes/Level Design.unity
+    guid: 174b0fc5b3d7c5447a54f87ebc4691aa
   m_configObjects: {}

@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 2754740949730619502}
   - component: {fileID: 2754740949730619489}
   - component: {fileID: 2754740949730619488}
+  - component: {fileID: 3352680197184496546}
   m_Layer: 0
   m_Name: Platform
   m_TagString: Ground
@@ -218,7 +219,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -253,3 +254,15 @@ MonoBehaviour:
   speed: 3
   waitToggle: 0
   waitTime: 5
+--- !u!114 &3352680197184496546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2754740949730619491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89d8a684841c6ec4f97bb417f9f0d8c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

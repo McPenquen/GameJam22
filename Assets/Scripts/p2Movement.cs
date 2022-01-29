@@ -10,6 +10,8 @@ public class p2Movement : MonoBehaviour
     // Start is called before the first frame update
     // Global Variables
     public float movementSpeed = 10.0f; 
+    public float movementScalarAdder = 0.2f;
+    float movementScalar = 0.0f; 
     private Vector2 screenBounds = new Vector2();
     public GameObject player;
     private SpriteRenderer playerSprite;
@@ -36,6 +38,11 @@ public class p2Movement : MonoBehaviour
 
         //Player sprite size
         Vector2 playerSize = new Vector2(playerSprite.size.x, playerSprite.size.y);
+
+        if(movementScalar >= 1.0f){
+            movementScalar += movementScalarAdder; 
+            movementSpeed = movementSpeed * movementScalar;
+        }
 
         //Calc input veocity
         inputVel = inputVel * movementSpeed * Time.deltaTime;

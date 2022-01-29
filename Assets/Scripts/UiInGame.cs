@@ -23,7 +23,7 @@ public class UiInGame : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(hs.health);
+        //Debug.Log(hs.health);
 
         if(hs.health == 3){
             fullHealth1.SetActive(true);

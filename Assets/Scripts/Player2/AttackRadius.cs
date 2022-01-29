@@ -30,7 +30,7 @@ public class AttackRadius : MonoBehaviour
             if (sRenderer.color.a > 0.0f)
             {
                 Color newColor = sRenderer.color;
-                newColor.a = newColor.a - 0.005f;
+                newColor.a = newColor.a - 0.003f;
                 // Lowest val can be 0
                 if (newColor.a < 0)
                 {

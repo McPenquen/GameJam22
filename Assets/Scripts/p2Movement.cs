@@ -13,7 +13,6 @@ public class p2Movement : MonoBehaviour
     public float movementScalarAdder = 0.2f;
     float movementScalar = 0.0f; 
     private Vector2 screenBounds = new Vector2();
-    public GameObject player;
     private SpriteRenderer playerSprite;
 
     void Start()
@@ -26,7 +25,7 @@ public class p2Movement : MonoBehaviour
         Cursor.visible = false;
 
         //Set playerSprite to be the sprite of the game object player. 
-        playerSprite = player.GetComponent<SpriteRenderer>();
+        playerSprite = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame

@@ -19,8 +19,13 @@ public class StartGame : MonoBehaviour
         }
     }
 
-    public void Print()
+    private void Print()
     {
         print("Start Game");
+    }
+
+    private void ChangeScene()
+    {
+
     }
 }

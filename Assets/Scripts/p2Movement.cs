@@ -42,7 +42,7 @@ public class p2Movement : MonoBehaviour
         //Transform the player object (Movement)
         transform.Translate(inputVel); 
 
-        //Keep the player object in the bounds of the main camera. 
+        //Keep the player object in the bounds of the main camera. https://www.youtube.com/watch?v=ailbszpt_AI
         Vector3 viewPos = new Vector3();
         viewPos = transform.position; 
         viewPos.x = Mathf.Clamp(viewPos.x, (screenBounds.x * -1) + (playerSize.x/2), screenBounds.x - (playerSize.x/2));

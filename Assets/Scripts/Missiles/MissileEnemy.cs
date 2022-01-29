@@ -26,8 +26,13 @@ public class MissileEnemy : MonoBehaviour
         {
             // Chase the player
             Vector3 dir = (Player1.transform.position - transform.position).normalized;
-
+            // Move the missile
             transform.position += dir * Time.deltaTime * speed;
+
+            // Rotate the missile
+            float newAngle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+            Quaternion q = Quaternion.AngleAxis(newAngle, Vector3.forward);
+            transform.rotation = Quaternion.Slerp(transform.rotation, q, Time.deltaTime * speed);
         }
         else
         {
@@ -43,7 +48,7 @@ public class MissileEnemy : MonoBehaviour
         {
             // TODO add dying animation
             Color newColor = sRenderer.color;
-            newColor.a = newColor.a - 0.1f;
+            newColor.a = newColor.a - 0.01f;
             // Lowest val can be 0
             if (newColor.a < 0)
             {
@@ -58,9 +63,9 @@ public class MissileEnemy : MonoBehaviour
             this.gameObject.SetActive(false);
         }
     }
-
-    private void OnCollisionEnter2D(Collision2D other)
+    // Setter for the alive bool
+    public void SetAlive(bool b )
     {
-        isAlive = false;
+        isAlive = b;
     }
 }

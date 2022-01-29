@@ -32,6 +32,6 @@ public class HealthSystem : MonoBehaviour
 	}
 	
 	public void PlayerDie() {
-		SceneManager.LoadScene(2);
+		SceneManager.LoadScene(1);
 	}
 }

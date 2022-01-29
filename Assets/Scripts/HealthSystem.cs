@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class HealthSystem : MonoBehaviour
 {
@@ -30,7 +31,7 @@ public class HealthSystem : MonoBehaviour
 		}
 	}
 	
-	void PlayerDie() {
-		print("dead");
+	public void PlayerDie() {
+		SceneManager.LoadScene(2);
 	}
 }

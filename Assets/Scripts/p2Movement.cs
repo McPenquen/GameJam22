@@ -8,7 +8,8 @@ public class p2Movement : MonoBehaviour
     //Edit -> Project Settings -> Input Manager
 
     // Start is called before the first frame update
-    public float movementSpeed = 5.0f; 
+    // Global Variables
+    public float movementSpeed = 10.0f; 
     private Vector2 screenBounds = new Vector2();
     public GameObject player;
     private SpriteRenderer playerSprite;

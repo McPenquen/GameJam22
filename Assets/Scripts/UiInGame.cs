@@ -13,8 +13,8 @@ public class UiInGame : MonoBehaviour
     public GameObject fullHealth1;
     public GameObject fullHealth2;
     public GameObject fullHealth3;
-    public Sprite[] emptyCoins; 
-    public Sprite[] fullCoins;
+    public GameObject[] emptyCoins; 
+    public GameObject[] fullCoins;
 
     // Start is called before the first frame update
     void Start()

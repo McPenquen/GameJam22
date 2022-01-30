@@ -262,6 +262,10 @@ MonoBehaviour:
   missiles:
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   attackRadius: 4
   ar: {fileID: 2177212021782408}
   movementSpeed: 10

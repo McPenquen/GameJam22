@@ -2,9 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-class P1JumpBoxManager : MonoBehaviour
+public class p1SideDetection : MonoBehaviour
 {
-	[HideInInspector] public bool CanJump { get { return hitCount > 0; } }
 	public int hitCount = 0;
 
 	private Animator animator = null;
@@ -16,11 +15,10 @@ class P1JumpBoxManager : MonoBehaviour
 
 	void OnTriggerEnter2D(Collider2D collider)
 	{
-		//Debug.Log("Yeah I do exist");
 		if (collider.tag == "Ground")
 		{
 			hitCount++;
-			animator.SetBool("isJumping", false);
+			animator.SetBool("isGrabbing", true);
 		}
 	}
 	
@@ -30,8 +28,9 @@ class P1JumpBoxManager : MonoBehaviour
 			hitCount--;
 			if (hitCount < 0)
 			{
-				Debug.Log("Player 1 jump box collision count is " + hitCount + ".");
+				Debug.Log("Player 1 side collision count is " + hitCount + ".");
 			}
+            animator.SetBool("isGrabbing", false);
 		}
 	}
 }

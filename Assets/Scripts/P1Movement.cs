@@ -16,10 +16,16 @@ class P1Movement : MonoBehaviour
 	public float jumpForce;
 	public float fastFallMod = 1.5f;
 
+	// Animation
+	private Animator animator = null;
+	private SpriteRenderer sr  = null;
+
 	// Set up Internal Variables
 	void Awake()
 	{
 		rb = GetComponent<Rigidbody2D>();
+		animator = GetComponent<Animator>();
+		sr = GetComponent<SpriteRenderer>();
 	}
 
 	// Set up External Variables
@@ -32,17 +38,30 @@ class P1Movement : MonoBehaviour
 	void Update()
 	{
 		if (Input.GetKey(KeyCode.A))
+		{
 			rb.velocity = new Vector2(-playerMoveSpeed, rb.velocity.y);
+			animator.SetBool("isRunning", true);
+			// If it's grabbing flip the sprite
+			sr.flipX = !animator.GetBool("isGrabbing");
+		}
 		else if (Input.GetKey(KeyCode.D))
+		{
 			rb.velocity = new Vector2(playerMoveSpeed, rb.velocity.y);
+			animator.SetBool("isRunning", true);
+			// If it's grabbing flip the sprite
+			sr.flipX = animator.GetBool("isGrabbing");
+		}
 		else 
+		{
 			rb.velocity = new Vector2(0.0f, rb.velocity.y);
-		
+			animator.SetBool("isRunning", false);
+		}
 		if (Input.GetKeyDown(KeyCode.R) || Input.GetKeyDown(KeyCode.W))
 		{
 			if (jbm.CanJump)
 			{
 				rb.velocity += new Vector2(0.0f, jumpForce);
+				animator.SetBool("isJumping", true);
 			}
 		}
 

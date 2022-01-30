@@ -58,6 +58,7 @@ public class MissileEnemy : MonoBehaviour
 
     private void Die()
     {
+        GetComponentInChildren<BoxCollider2D>().enabled = false;
         dyingCountdown -= Time.deltaTime;
         // Fade away 
         if (sRenderer.color.a > 0.0f)

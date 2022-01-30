@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-
 public class FinishLine : MonoBehaviour
 {
     public float timeUntilWin = 1f;
@@ -21,7 +20,8 @@ public class FinishLine : MonoBehaviour
     {
         if (updateTime)
         {
-            currentTime += Time.deltaTime;
+            currentTime += Time.unscaledDeltaTime;
+			Time.timeScale = 1.0f - (currentTime / timeUntilWin);
         }
         if (currentTime >= timeUntilWin)
         {

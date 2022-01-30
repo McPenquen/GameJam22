@@ -546,6 +546,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1949579308}
     m_Modifications:
+    - target: {fileID: 68727991698109566, guid: d2ab8bcacc222b4419fe40993f87aa44, type: 3}
+      propertyPath: Player1
+      value: 
+      objectReference: {fileID: 479175870}
+    - target: {fileID: 68727991698109566, guid: d2ab8bcacc222b4419fe40993f87aa44, type: 3}
+      propertyPath: Player2
+      value: 
+      objectReference: {fileID: 1613376065}
     - target: {fileID: 68727993192745029, guid: d2ab8bcacc222b4419fe40993f87aa44, type: 3}
       propertyPath: m_Name
       value: MissileNest
@@ -24046,6 +24054,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1949579308}
     m_Modifications:
+    - target: {fileID: 68727991698109566, guid: d2ab8bcacc222b4419fe40993f87aa44, type: 3}
+      propertyPath: Player1
+      value: 
+      objectReference: {fileID: 479175870}
+    - target: {fileID: 68727991698109566, guid: d2ab8bcacc222b4419fe40993f87aa44, type: 3}
+      propertyPath: Player2
+      value: 
+      objectReference: {fileID: 1613376065}
     - target: {fileID: 68727993192745029, guid: d2ab8bcacc222b4419fe40993f87aa44, type: 3}
       propertyPath: m_Name
       value: MissileNest
@@ -24692,6 +24708,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1949579308}
     m_Modifications:
+    - target: {fileID: 68727991698109566, guid: d2ab8bcacc222b4419fe40993f87aa44, type: 3}
+      propertyPath: Player1
+      value: 
+      objectReference: {fileID: 479175870}
+    - target: {fileID: 68727991698109566, guid: d2ab8bcacc222b4419fe40993f87aa44, type: 3}
+      propertyPath: Player2
+      value: 
+      objectReference: {fileID: 1613376065}
     - target: {fileID: 68727993192745029, guid: d2ab8bcacc222b4419fe40993f87aa44, type: 3}
       propertyPath: m_Name
       value: MissileNest
@@ -24753,6 +24777,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1949579308}
     m_Modifications:
+    - target: {fileID: 68727991698109566, guid: d2ab8bcacc222b4419fe40993f87aa44, type: 3}
+      propertyPath: Player1
+      value: 
+      objectReference: {fileID: 479175870}
+    - target: {fileID: 68727991698109566, guid: d2ab8bcacc222b4419fe40993f87aa44, type: 3}
+      propertyPath: Player2
+      value: 
+      objectReference: {fileID: 1613376065}
     - target: {fileID: 68727993192745029, guid: d2ab8bcacc222b4419fe40993f87aa44, type: 3}
       propertyPath: m_Name
       value: MissileNest
@@ -27749,6 +27781,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1949579308}
     m_Modifications:
+    - target: {fileID: 68727991698109566, guid: d2ab8bcacc222b4419fe40993f87aa44, type: 3}
+      propertyPath: Player1
+      value: 
+      objectReference: {fileID: 479175870}
+    - target: {fileID: 68727991698109566, guid: d2ab8bcacc222b4419fe40993f87aa44, type: 3}
+      propertyPath: Player2
+      value: 
+      objectReference: {fileID: 1613376065}
     - target: {fileID: 68727993192745029, guid: d2ab8bcacc222b4419fe40993f87aa44, type: 3}
       propertyPath: m_Name
       value: MissileNest (1)

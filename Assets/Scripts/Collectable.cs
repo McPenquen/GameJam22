@@ -14,7 +14,7 @@ public class Collectable : MonoBehaviour
 	
 	void OnTriggerEnter2D(Collider2D c) {
 		if (c.tag == "Player") {
-			Debug.Log(id);
+			//Debug.Log(id);
 			Destroy(gameObject);
 			uig.coinUI(id, true);
 		}

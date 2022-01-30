@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
 using UnityEngine.SceneManagement;
 
 
@@ -19,11 +20,6 @@ public class StartGame : MonoBehaviour
         {
             ChangeScene();
         }
-    }
-
-    private void Print()
-    {
-        print("Start Game");
     }
 
     private void ChangeScene()

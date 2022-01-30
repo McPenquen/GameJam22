@@ -41,13 +41,15 @@ class P1Movement : MonoBehaviour
 		{
 			rb.velocity = new Vector2(-playerMoveSpeed, rb.velocity.y);
 			animator.SetBool("isRunning", true);
-			sr.flipX = true;
+			// If it's grabbing flip the sprite
+			sr.flipX = !animator.GetBool("isGrabbing");
 		}
 		else if (Input.GetKey(KeyCode.D))
 		{
 			rb.velocity = new Vector2(playerMoveSpeed, rb.velocity.y);
 			animator.SetBool("isRunning", true);
-			sr.flipX = false;
+			// If it's grabbing flip the sprite
+			sr.flipX = animator.GetBool("isGrabbing");
 		}
 		else 
 		{

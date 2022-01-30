@@ -13,6 +13,8 @@ public class UiInGame : MonoBehaviour
     public GameObject fullHealth1;
     public GameObject fullHealth2;
     public GameObject fullHealth3;
+    public Sprite[] emptyCoins; 
+    public Sprite[] fullCoins;
 
     // Start is called before the first frame update
     void Start()
@@ -67,6 +69,14 @@ public class UiInGame : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.Escape)){
             SceneManager.LoadScene(0);
+        }
+    }
+
+    public void coinUI(int i, bool isActive){ 
+
+        if(isActive){
+            emptyCoins[i].SetActive(false);
+            fullCoins[i].SetActive(true);
         }
     }
 }

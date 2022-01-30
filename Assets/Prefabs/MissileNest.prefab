@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 68727991698109564}
   - component: {fileID: 68727991698109567}
   - component: {fileID: 68727991698109566}
+  - component: {fileID: 4631057262921735282}
   m_Layer: 0
   m_Name: Missile
   m_TagString: Enemy
@@ -99,6 +100,25 @@ MonoBehaviour:
   Player1: {fileID: 0}
   Player2: {fileID: 0}
   speed: 2
+--- !u!95 &4631057262921735282
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 68727991698109563}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 979d449e0e90d514f94d3a49c0da24a4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &68727992036244949
 GameObject:
   m_ObjectHideFlags: 0

@@ -44,7 +44,12 @@ public class Collapse : MonoBehaviour
     private void DisableObject()
     {
         gameObject.GetComponent<SpriteRenderer>().enabled = false;
-        gameObject.GetComponent<BoxCollider2D>().enabled = false;
+        GameObject jb = GameObject.Find("p1JumpBox");
+		BoxCollider2D bc = gameObject.GetComponent<BoxCollider2D>();
+		if (bc.IsTouching(jb.GetComponent<BoxCollider2D>())) {
+			jb.GetComponent<P1JumpBoxManager>().hitCount--;
+		}
+		bc.enabled = false;
         isDisabled = false;
     }
 

@@ -13,11 +13,17 @@ public class UiInGame : MonoBehaviour
     public GameObject fullHealth1;
     public GameObject fullHealth2;
     public GameObject fullHealth3;
+    public GameObject[] emptyCoins; 
+    public GameObject[] fullCoins;
 
     // Start is called before the first frame update
     void Start()
     {
         hs = GameObject.Find("Player1").GetComponent<HealthSystem>();
+        for(int i = 0; i < 5; i++){
+            fullCoins[i].SetActive(false);
+            emptyCoins[i].SetActive(true);
+        }
     }
 
     // Update is called once per frame
@@ -72,6 +78,14 @@ public class UiInGame : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Keypad1) || Input.GetKeyDown(KeyCode.Alpha1))
         {
             SceneManager.LoadScene(0);
+        }
+    }
+
+    public void coinUI(int i, bool isActive){ 
+        
+        if(isActive){
+            emptyCoins[i].SetActive(false);
+            fullCoins[i].SetActive(true);
         }
     }
 }

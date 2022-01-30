@@ -5,7 +5,7 @@ using UnityEngine;
 public class Collectable : MonoBehaviour
 {
 	public int id;
-	public UiInGame uig;
+	[HideInInspector] UiInGame uig;
 	
     void Start()
     {

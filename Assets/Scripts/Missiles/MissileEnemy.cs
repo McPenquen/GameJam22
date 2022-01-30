@@ -11,7 +11,7 @@ public class MissileEnemy : MonoBehaviour
     [SerializeField] private float speed = 1;
 
     // Private Variables
-    private bool isAlive = true;
+    public bool isAlive = true;
     // Dying counter
     private float dyingCountdown = 3.0f; // countdown for the missile to die
     private SpriteRenderer sRenderer = null;

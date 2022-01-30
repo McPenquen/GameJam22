@@ -68,5 +68,10 @@ public class UiInGame : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Escape)){
             SceneManager.LoadScene(0);
         }
+
+        if (Input.GetKeyDown(KeyCode.Keypad1) || Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            SceneManager.LoadScene(0);
+        }
     }
 }

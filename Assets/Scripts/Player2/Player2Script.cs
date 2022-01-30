@@ -50,7 +50,7 @@ public class Player2Script : MonoBehaviour
         }
 
         // Allow moving again
-        if (!ar.CanAttack())
+        if (ar.CanAttack())
         {
             isMoving = true;
         }
@@ -72,7 +72,17 @@ public class Player2Script : MonoBehaviour
             inputVel = inputVel * movementSpeed * Time.deltaTime;
             
             //Transform the player object (Movement)
-            transform.Translate(inputVel); 
+            transform.Translate(inputVel);
+
+            // Flip
+            if (inputVel.x > 0)
+            {
+                playerSprite.flipX = false; 
+            }
+            else if (inputVel.x < 0)
+            {
+                playerSprite.flipX = true; 
+            }
 
             //Keep the player object in the bounds of the main camera. https://www.youtube.com/watch?v=ailbszpt_AI
             Vector3 viewPos = new Vector3();

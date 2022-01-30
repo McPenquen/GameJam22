@@ -20,6 +20,10 @@ public class UiInGame : MonoBehaviour
     void Start()
     {
         hs = GameObject.Find("Player1").GetComponent<HealthSystem>();
+        for(int i = 0; i < 5; i++){
+            fullCoins[i].SetActive(false);
+            emptyCoins[i].SetActive(true);
+        }
     }
 
     // Update is called once per frame
@@ -73,7 +77,7 @@ public class UiInGame : MonoBehaviour
     }
 
     public void coinUI(int i, bool isActive){ 
-
+        
         if(isActive){
             emptyCoins[i].SetActive(false);
             fullCoins[i].SetActive(true);

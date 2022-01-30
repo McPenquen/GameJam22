@@ -24949,11 +24949,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9067975969116682067, guid: 469322d2ae8458049b346b8db01a112c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.82
+      value: -10.36
       objectReference: {fileID: 0}
     - target: {fileID: 9067975969116682067, guid: 469322d2ae8458049b346b8db01a112c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 28.3
+      value: -11.67
       objectReference: {fileID: 0}
     - target: {fileID: 9067975969116682067, guid: 469322d2ae8458049b346b8db01a112c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -28211,7 +28211,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   p2Strength: 0
-  initialDelay: 0
+  initialDelay: 3
   camSlideSpeed: 0.1
   lowerLimit: -Infinity
   upperLimit: Infinity

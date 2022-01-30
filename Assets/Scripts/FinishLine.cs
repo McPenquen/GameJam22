@@ -33,6 +33,9 @@ public class FinishLine : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        updateTime = true;
+        if (collision.tag == "Player")
+        {
+           updateTime = true; 
+        }
     }
 }

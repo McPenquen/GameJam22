@@ -6,6 +6,7 @@ public class MissileEnemy : MonoBehaviour
 {
     [SerializeField] private GameObject Player1 = null;
     [SerializeField] private Player2Script Player2 = null;
+    AudioSource missileDeath;
 
     [Header("Movement Variables")]
     [SerializeField] private float speed = 1;
@@ -22,6 +23,8 @@ public class MissileEnemy : MonoBehaviour
         isAlive = true;
         sRenderer = GetComponent<SpriteRenderer>();
         isKillable = false;
+
+        
     }
 
     private void Update()
@@ -52,7 +55,8 @@ public class MissileEnemy : MonoBehaviour
         }
         else
         {
-            Die();
+            //missileDeath.Play();
+            Die();            
         }
     }
 
@@ -72,11 +76,15 @@ public class MissileEnemy : MonoBehaviour
             }
             sRenderer.color = newColor;
         }
-
+        
         // Die after the countdown
         if (dyingCountdown <= 0)
         {
             this.gameObject.SetActive(false);
+
+            // Get Audio Source
+            missileDeath = GetComponent<AudioSource>();
+            missileDeath.Play();
         }
     }
     // Setter for the alive bool
@@ -93,7 +101,7 @@ public class MissileEnemy : MonoBehaviour
     public void GetKilled()
     {
         if (isKillable)
-        {
+        {            
             isAlive = false;
         }
     }

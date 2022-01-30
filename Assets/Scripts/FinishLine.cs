@@ -27,7 +27,7 @@ public class FinishLine : MonoBehaviour
         {
             updateTime = false;
             currentTime = 0;
-            SceneManager.LoadScene(sceneBuildIndex: 0);
+            SceneManager.LoadScene(sceneBuildIndex: 2);
         }
     }
 

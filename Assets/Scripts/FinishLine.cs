@@ -27,12 +27,15 @@ public class FinishLine : MonoBehaviour
         {
             updateTime = false;
             currentTime = 0;
-            SceneManager.LoadScene(sceneBuildIndex: 0);
+            SceneManager.LoadScene(sceneBuildIndex: 2);
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        updateTime = true;
+        if (collision.tag == "Player")
+        {
+           updateTime = true; 
+        }
     }
 }

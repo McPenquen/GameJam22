@@ -7,11 +7,21 @@ class P1JumpBoxManager : MonoBehaviour
 	[HideInInspector] public bool CanJump { get { return hitCount > 0; } }
 	public int hitCount = 0;
 
+	private Animator animator = null;
+
+	private void Start()
+	{
+		animator = GetComponentInParent<Animator>();
+	}
+
 	void OnTriggerEnter2D(Collider2D collider)
 	{
 		//Debug.Log("Yeah I do exist");
 		if (collider.tag == "Ground")
+		{
 			hitCount++;
+			animator.SetBool("isJumping", false);
+		}
 	}
 	
 	void OnTriggerExit2D(Collider2D collider)

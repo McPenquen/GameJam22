@@ -98,7 +98,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player1: {fileID: 0}
   Player2: {fileID: 0}
-  speed: 1
+  speed: 2
 --- !u!1 &68727992036244949
 GameObject:
   m_ObjectHideFlags: 0
